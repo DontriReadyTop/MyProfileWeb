@@ -6,7 +6,7 @@ function ProfileImg(props) {
     return (
         <div className="profile-img">
             <img src={profile.thumbnailUrl} onClick={() => {onProfileOpenClick(profile)}}/>
-            <h4>{profile.title}</h4>
+            <h4>{profile.name}</h4>
         </div>
     );
 }

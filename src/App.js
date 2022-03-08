@@ -19,7 +19,7 @@ function App() {
     }
 
     const filterProfiles = profiles.filter((profile) => {
-        return profile.title.includes(searchText);
+        return profile.title.includes(searchText.toLocaleLowerCase());
     });
     const profileElements = filterProfiles.map((profile, index) => {
         return <ProfileImg key={index} profile={profile} onProfileOpenClick={onProfileOpenClick} />;
