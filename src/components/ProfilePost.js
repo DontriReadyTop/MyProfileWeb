@@ -7,7 +7,7 @@ function ProfilePost(props) {
             <div className="profile-post-bg" onClick={onProfileCloseClick}/>
             <div className="profile-post-content">
                 <img src={profile.thumbnailUrl} />
-                <h4>{profile.title}</h4>
+                <h2>{profile.title}</h2>
             </div>
         </div>
     );

@@ -1,10 +1,5 @@
 const profiles = [
    {
-      name: "Dontri",
-      title: "dontri",
-      thumbnailUrl: "/images/dontriProfile.jpg"
-   },
-   {
       name: "Oak",
       title: "oak",
       thumbnailUrl: "/images/oakProfile.jpg"
