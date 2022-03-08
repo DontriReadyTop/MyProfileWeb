@@ -21,13 +21,15 @@
     margin-bottom: 30px;
 }
 
-.app-myprofile-gird {
-    display: grid;
-    grid-template-columns: 2.5fr 3fr 2fr;
-    grid-template-areas:
-        "image pi pi";
-    column-gap: 16px;
-    row-gap: 16px;
+@media only screen and (min-width: 1082px) {
+    .app-myprofile-gird {
+        display: grid;
+        grid-template-columns: 2.5fr 3fr 2fr;
+        grid-template-areas:
+            "image pi pi";
+        column-gap: 16px;
+        row-gap: 16px;
+    }
 }
 
 .app-myprofile-image, .app-myprofile-pi {
@@ -41,16 +43,29 @@
     border-radius: 10px;
 }
 
-
-.app-myprofile-image img {
-    border-radius: 50%;
-    display: block;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 30px;
+@media only screen and (min-width: 1082px) {
+    .app-myprofile-image img {
+        border-radius: 50%;
+        display: block;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
 }
+@media only screen and (max-width: 1081px) {
+    .app-myprofile-image img {
+        border-radius: 50%;
+        display: block;
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+}
+
 
 .app-myprofile-image-name {
     font-size: 30px;
@@ -82,22 +97,45 @@
     border-radius: 10px;
 }
 
-.app-myprofile-pi-content {
-    font-size: 24px;
-    font-weight: bold;
-    align-items: center;
-    display: grid;
-    grid-template-columns: 1fr 2.5fr;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 30px;
+@media only screen and (min-width: 736px) {
+    .app-myprofile-pi-content {
+        font-size: 24px;
+        font-weight: bold;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 2.5fr;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+
+    .app-myprofile-pi-content val {
+        font-size: 22px;
+        font-weight: normal;
+        color: #808080;
+    }
+}
+@media only screen and (max-width: 735px) {
+    .app-myprofile-pi-content {
+        font-size: 20px;
+        font-weight: bold;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+
+    .app-myprofile-pi-content div {
+        margin-bottom: 10px;
+    }
+    
+    .app-myprofile-pi-content val {
+        font-size: 18px;
+        font-weight: normal;
+        color: #808080;
+    }
 }
 
-.app-myprofile-pi-content val {
-    font-size: 22px;
-    font-weight: normal;
-    color: #808080;
-}
 
 .app-myprofile-pi hr {
     border: 1px solid #d8d5d59d;
