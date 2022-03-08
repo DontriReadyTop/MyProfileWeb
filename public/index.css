@@ -1,3 +1,8 @@
-.scroll-hold{
-    overflow-y:scroll;
+.scroll-hold {
+    overflow-y: scroll;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
 }
