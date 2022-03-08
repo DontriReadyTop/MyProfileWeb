@@ -9,7 +9,7 @@ function AppSearch(props) {
                 type="text"
                 placeholder="ค้นหาสักหน่อยมั้ยหล่ะ"
                 value={value}
-                onChange={(event) => { onValueChange(event.target.value)}}
+                onChange={(event) => { onValueChange(event.target.value) }}
             />
         </div>
     );

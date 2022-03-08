@@ -11,6 +11,4 @@ function ProfileImg(props) {
     );
 }
 
-
-
 export default ProfileImg;
