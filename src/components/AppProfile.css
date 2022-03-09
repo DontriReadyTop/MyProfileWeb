@@ -1,0 +1,33 @@
+.app-myprofile {
+    margin-bottom: 30px;
+}
+
+.app-myprofile-titel {
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 1100px) {
+    .app-myprofile-gird {
+        display: grid;
+        grid-template-columns: 2.5fr 3fr 2fr;
+        grid-template-areas:
+            "image pi pi"
+            "social pi pi"
+            "social some some";
+        column-gap: 16px;
+        row-gap: 16px;
+    }
+}
+
+.app-myprofile-image, .app-myprofile-pi, .app-myprofile-social {
+    padding: 10px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .app-myprofile-tablet {
+        margin-bottom: 10px;
+    }
+}

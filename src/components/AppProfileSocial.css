@@ -1,0 +1,76 @@
+.app-myprofile-social {
+    grid-area: social;
+    box-shadow: 0px 2px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 10px;
+}
+
+@media only screen and (min-width: 1100px) {
+    .app-myprofile-social-content {
+        font-size: 16px;
+        font-weight: bold;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1.5fr 2.5fr;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 10px;
+    }
+
+    .app-myprofile-social-content val {
+        font-size: 16px;
+        font-weight: normal;
+        color: #808080;
+    }
+}
+
+@media only screen and (max-width: 1099px) and (min-width: 736px) {
+    .app-myprofile-social-content {
+        font-size: 24px;
+        font-weight: bold;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 1fr 2.5fr;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+
+    .app-myprofile-social-content val {
+        font-size: 22px;
+        font-weight: normal;
+        color: #808080;
+    }
+}
+
+@media only screen and (max-width: 735px) {
+    .app-myprofile-social-content {
+        font-size: 20px;
+        font-weight: bold;
+        align-items: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+
+    .app-myprofile-social-content div {
+        margin-bottom: 10px;
+    }
+
+    .app-myprofile-social-content val {
+        font-size: 18px;
+        font-weight: normal;
+        color: #808080;
+    }
+}
+
+.app-myprofile-social hr {
+    border: 1px solid #d8d5d59d;
+    width: 95%;
+}
+
+.app-myprofile-social-content>div>img {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
