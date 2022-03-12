@@ -1,52 +1,22 @@
-import { useState } from 'react';
 import './App.css';
+import { Routes, Route, Navigate } from 'react-router-dom';
+import { StickyNav } from 'react-js-stickynav';
 import AppHeader from './components/AppHeader';
-import AppProfile from './components/AppProfile';
-import AppSearch from './components/AppSearch';
-import ProfileImg from './components/ProfileImg';
-import ProfilePost from './components/ProfilePost';
-import profiles from './data/Profile';
+import PageHome from './Page/PageHome';
+
+
 
 function App() {
-    const [selectedProfile, setSelectedProfile] = useState(null);
-    const [searchText, setSearchText] = useState('');
 
-    function onProfileOpenClick(theProfile) {
-        setSelectedProfile(theProfile);
-    }
-
-    function onProfileCloseClick() {
-        setSelectedProfile(null);
-    }
-
-    const filterProfiles = profiles.filter((profile) => {
-        return profile.title.includes(searchText.toLocaleLowerCase());
-    });
-    const profileElements = filterProfiles.map((profile, index) => {
-        return <ProfileImg key={index} profile={profile} onProfileOpenClick={onProfileOpenClick} />;
-    });
-
-    let profilePost = null;
-    if (!!selectedProfile) {
-        profilePost = <ProfilePost profile={selectedProfile} onProfileCloseClick={onProfileCloseClick} />;
-    }
 
     return (
         <div className="app">
-            <AppHeader />
-            <section className="app-section">
-                <div className="app-container">
-                    <AppProfile onProfileOpenClick={onProfileOpenClick} />
-                    <div className="app-myfriend">
-                        <AppSearch value={searchText} onValueChange={setSearchText} />
-                        <div className="app-grid">
-                            {profileElements}
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-            {profilePost}
+            <StickyNav>
+                <AppHeader />
+            </StickyNav>
+            <Routes >
+                <Route path="/" element={<PageHome />} />
+            </Routes>
         </div>
     );
 }

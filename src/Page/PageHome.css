@@ -1,0 +1,6 @@
+.app-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "def def def def def";
+    row-gap: 16px;
+}
