@@ -4,10 +4,10 @@ function AppProfileSocial() {
     return (
         <div className="app-myprofile-social app-myprofile-tablet">
 
-            <a href="https://eager-albattani-fe35a1.netlify.app/" target="_blank">
+            <a href="https://my-profile-dontri.herokuapp.com/" target="_blank">
                 <div className="app-myprofile-social-content">
                     <div>🌐Website</div>
-                    <val>https://eager-albattani-fe35a1.netlify.app/</val>
+                    <val>https://my-profile-dontri.herokuapp.com</val>
                 </div>
             </a>
             <hr />

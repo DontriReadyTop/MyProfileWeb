@@ -4,6 +4,11 @@ import AppProfileAboutMe from './AppProfileAboutMe';
 import AppProfilePI from './AppProfilePI';
 import AppProfileSocial from './AppProfileSocial';
 import profiles from '../data/Profile';
+import AppProfileExperience from './AppProfileExperience';
+import AppProfileEducation from './AppProfileEducation';
+import AppProfileSkill from './AppProfileSkill';
+
+
 
 function AppProfile(props) {
     const { onProfileOpenClick } = props;
@@ -15,6 +20,9 @@ function AppProfile(props) {
                 <AppProfileAboutMe />
                 <AppProfilePI />
                 <AppProfileSocial />
+                <AppProfileExperience />
+                <AppProfileEducation />
+                <AppProfileSkill />
             </div>
         </div>
     );

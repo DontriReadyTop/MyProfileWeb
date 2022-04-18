@@ -17,13 +17,15 @@
             "image aboutme aboutme"
             "image pi pi"
             "social pi pi"
+            "experience experience experience"
+            "education education skill"
         ;
         column-gap: 16px;
         row-gap: 16px;
     }
 }
 
-.app-myprofile-image, .app-myprofile-pi, .app-myprofile-social, .app-myprofile-about-me {
+.app-myprofile-image, .app-myprofile-pi, .app-myprofile-social, .app-myprofile-about-me, .app-myprofile-experience, .app-myprofile-education, .app-myprofile-skill {
     padding: 10px;
 }
 
