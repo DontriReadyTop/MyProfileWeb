@@ -21,14 +21,8 @@
         margin-bottom: 20px;
     }
 
-    .app-myprofile-skill-ex-name {
-        font-size: 24px;
-        font-weight: bold;
-        align-items: center;
-    }
-
-    .app-myprofile-skill-ex-message {
-        font-size: 20px;
+    .app-myprofile-skill-name {
+        font-size: 17px;
         font-weight: normal;
         align-items: center;
         color: #808080;
@@ -50,13 +44,7 @@
         margin-bottom: 15px;
     }
 
-    .app-myprofile-skill-ex-name {
-        font-size: 19px;
-        font-weight: bold;
-        align-items: center;
-    }
-
-    .app-myprofile-skill-ex-message {
+    .app-myprofile-skill-name {
         font-size: 18px;
         font-weight: normal;
         align-items: center;
@@ -64,7 +52,8 @@
     }
 }
 
-.app-myprofile-skill hr {
-    border: 1px solid #d8d5d59d;
-    width: 95%;
+.app-myprofile-skill-name>img {
+    width: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
 }

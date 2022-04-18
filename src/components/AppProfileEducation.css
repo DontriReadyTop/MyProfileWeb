@@ -7,6 +7,7 @@
 }
 
 @media only screen and (min-width: 736px) {
+
     .app-myprofile-education-content {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -21,21 +22,30 @@
         margin-bottom: 20px;
     }
 
-    .app-myprofile-education-ex-name {
+    .app-myprofile-education-edu-name {
         font-size: 24px;
         font-weight: bold;
         align-items: center;
     }
 
-    .app-myprofile-education-ex-message {
+    .app-myprofile-education-edu-name-place {
+        font-size: 22px;
+        font-weight: bold;
+        align-items: center;
+        color: #808080;
+    }
+
+    .app-myprofile-education-edu-message {
         font-size: 20px;
         font-weight: normal;
         align-items: center;
         color: #808080;
     }
+
 }
 
 @media only screen and (max-width: 735px) {
+
     .app-myprofile-education-content {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -50,18 +60,26 @@
         margin-bottom: 15px;
     }
 
-    .app-myprofile-education-ex-name {
+    .app-myprofile-education-edu-name {
         font-size: 19px;
         font-weight: bold;
         align-items: center;
     }
 
-    .app-myprofile-education-ex-message {
+    .app-myprofile-education-edu-name-place {
+        font-size: 19px;
+        font-weight: bold;
+        align-items: center;
+        color: #808080;
+    }
+
+    .app-myprofile-education-edu-message {
         font-size: 18px;
         font-weight: normal;
         align-items: center;
         color: #808080;
     }
+
 }
 
 .app-myprofile-education hr {

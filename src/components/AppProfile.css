@@ -23,6 +23,16 @@
         column-gap: 16px;
         row-gap: 16px;
     }
+
+    .app-myprofile-gird-education-skill {
+        display: grid;
+        grid-template-columns: 3fr 3fr;
+        grid-template-areas:
+            "education skill"
+        ;
+        column-gap: 16px;
+        row-gap: 16px;
+    }
 }
 
 .app-myprofile-image, .app-myprofile-pi, .app-myprofile-social, .app-myprofile-about-me, .app-myprofile-experience, .app-myprofile-education, .app-myprofile-skill {

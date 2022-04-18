@@ -21,6 +21,8 @@ function AppProfile(props) {
                 <AppProfilePI />
                 <AppProfileSocial />
                 <AppProfileExperience />
+            </div>
+            <div className="app-myprofile-gird-education-skill">
                 <AppProfileEducation />
                 <AppProfileSkill />
             </div>
