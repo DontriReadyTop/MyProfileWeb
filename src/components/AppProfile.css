@@ -14,15 +14,16 @@
         display: grid;
         grid-template-columns: 2.5fr 3fr 2fr;
         grid-template-areas:
+            "image aboutme aboutme"
             "image pi pi"
             "social pi pi"
-            "social some some";
+        ;
         column-gap: 16px;
         row-gap: 16px;
     }
 }
 
-.app-myprofile-image, .app-myprofile-pi, .app-myprofile-social {
+.app-myprofile-image, .app-myprofile-pi, .app-myprofile-social, .app-myprofile-about-me {
     padding: 10px;
 }
 
