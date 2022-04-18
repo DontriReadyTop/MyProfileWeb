@@ -25,35 +25,37 @@
     margin-right: auto;
 }
 
-.nav__links {
-    list-style: none;
-}
+@media only screen and (min-width: 736px) {
+    .nav__links {
+        list-style: none;
+    }
 
-.nav__links li {
-    display: inline-block;
-    padding: 0px 20px;
-}
+    .nav__links li {
+        display: inline-block;
+        padding: 0px 20px;
+    }
 
-.nav__links li a {
-    transition: all 0.3s ease 0s;
-}
+    .nav__links li a {
+        transition: all 0.3s ease 0s;
+    }
 
-.nav__links li a:hover {
-    color: #0088a9;
-}
+    .nav__links li a:hover {
+        color: #0088a9;
+    }
 
-.app-login button {
+    .app-login button {
 
-    color: white;
-    padding: 9px 25px;
-    background-color: rgba(0, 136, 169, 1);
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
+        color: white;
+        padding: 9px 25px;
+        background-color: rgba(0, 136, 169, 1);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+    }
 
-.app-login button:hover {
-    background-color: rgb(255, 153, 0);
+    .app-login button:hover {
+        background-color: rgb(255, 153, 0);
 
+    }
 }

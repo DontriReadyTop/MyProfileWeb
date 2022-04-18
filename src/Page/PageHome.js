@@ -34,13 +34,15 @@ function PageHome() {
         <section className="app-section-first">
             <div className="app-container">
                 <AppProfile onProfileOpenClick={onProfileOpenClick} />
+
+
+
                 <div className="app-myfriend">
                     <AppSearch value={searchText} onValueChange={setSearchText} />
                     <div className="app-grid">
                         {profileElements}
                     </div>
                 </div>
-
             </div>
             {profilePost}
         </section>
