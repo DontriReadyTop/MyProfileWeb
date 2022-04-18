@@ -11,7 +11,6 @@ function AppProfileAboutMe() {
                     I will do a good job when that job is my favorite.
                     But that doesn't mean the work I don't enjoy is bad.
                     I just have to try to do it a little bit more.
-                    LOOOOOOOOOO
                 </div>
             </div>
         </div>
