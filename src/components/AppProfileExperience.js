@@ -2,7 +2,7 @@ import './AppProfileExperience.css';
 
 function AppProfileExperience() {
     return (
-        <div className="app-myprofile-experience app-myprofile-tablet">
+        <div data-aos="flip-left" data-aos-duration="800" className="app-myprofile-experience app-myprofile-tablet">
             <div className="app-myprofile-experience-content">
 
                 <div className="app-myprofile-experience-title">🎓Experience</div>

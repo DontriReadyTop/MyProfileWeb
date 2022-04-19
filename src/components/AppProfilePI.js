@@ -2,7 +2,7 @@ import './AppProfilePI.css';
 
 function AppProfilePI() {
     return (
-        <div className="app-myprofile-pi app-myprofile-tablet">
+        <div data-aos="fade-up-left" data-aos-duration="500" className="app-myprofile-pi app-myprofile-tablet">
             <div className="app-myprofile-pi-content">
                 <div>📝Full Name</div>
                 <val>Mr.Trisinchai Kamjamnong</val>

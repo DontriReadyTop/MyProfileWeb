@@ -2,7 +2,7 @@ import './AppProfileSocial.css';
 
 function AppProfileSocial() {
     return (
-        <div className="app-myprofile-social app-myprofile-tablet">
+        <div data-aos="fade-up-right" data-aos-duration="600" className="app-myprofile-social app-myprofile-tablet">
 
             <a href="https://my-profile-dontri.herokuapp.com/" target="_blank">
                 <div className="app-myprofile-social-content">

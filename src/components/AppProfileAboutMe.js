@@ -2,7 +2,7 @@ import './AppProfileAboutMe.css';
 
 function AppProfileAboutMe() {
     return (
-        <div className="app-myprofile-about-me app-myprofile-tablet">
+        <div data-aos="fade-down-left" data-aos-duration="700" className="app-myprofile-about-me app-myprofile-tablet">
             <div className="app-myprofile-about-me-content">
                 <div className="app-myprofile-about-me-title">🧑🏻About Me</div>
                 <div className="app-myprofile-about-me-message">

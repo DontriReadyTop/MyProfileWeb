@@ -2,7 +2,7 @@ import './AppProfileEducation.css';
 
 function AppProfileEducation() {
     return (
-        <div className="app-myprofile-education app-myprofile-tablet">
+        <div data-aos="zoom-out-right" data-aos-duration="1000" className="app-myprofile-education app-myprofile-tablet">
             <div className="app-myprofile-education-content">
                 <div className="app-myprofile-education-title">🏫Education</div>
 

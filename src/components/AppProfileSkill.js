@@ -1,10 +1,8 @@
 import './AppProfileSkill.css';
 
 function AppProfileSkill() {
-
     return (
-
-        <div className="app-myprofile-skill app-myprofile-tablet">
+        <div data-aos="flip-down" data-aos-duration="900" className="app-myprofile-skill app-myprofile-tablet">
             <div className="app-myprofile-skill-content">
                 <div className="app-myprofile-skill-title">
                     🖥️Skill
@@ -45,7 +43,6 @@ function AppProfileSkill() {
                 </div>
             </div>
         </div>
-
     );
 }
 
