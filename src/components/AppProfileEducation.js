@@ -11,7 +11,7 @@ function AppProfileEducation() {
                         Silpakorn University
                     </div>
                     <div className="app-myprofile-education-edu-name-place">
-                        Bachelor of Science in Computer Science,2022
+                        Bachelor of Science in Computer Science, 2022
                     </div>
                     <ul className="app-myprofile-education-edu-message">
                         <li>
@@ -28,7 +28,7 @@ function AppProfileEducation() {
                         Sri Ayudhya School
                     </div>
                     <div className="app-myprofile-education-edu-name-place">
-                        Sciences And Mathematics Program,2018
+                        Sciences And Mathematics Program, 2018
                     </div>
                     <ul className="app-myprofile-education-edu-message">
                         <li>
