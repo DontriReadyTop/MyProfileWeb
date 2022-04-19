@@ -36,6 +36,10 @@ function AppProfileSkill() {
                     Wordpress Website
                 </div>
                 <div className="app-myprofile-skill-name">
+                    <img src="/images/postman.png" />
+                    Postman
+                </div>
+                <div className="app-myprofile-skill-name">
                     <img src="/images/visual-studio.png" />
                     Visual Studio Code Programming
                 </div>
