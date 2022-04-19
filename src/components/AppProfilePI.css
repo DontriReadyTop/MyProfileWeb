@@ -5,7 +5,10 @@
     border-radius: 10px;
     height: fit-content;
 }
-
+.app-myprofile-pi-content div {
+    color: var(--text-primary);
+    transition: all .3s;    
+}
 @media only screen and (min-width: 736px) {
     .app-myprofile-pi-content {
         font-size: 24px;

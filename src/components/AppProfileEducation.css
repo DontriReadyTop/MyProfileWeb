@@ -6,6 +6,16 @@
     height: fit-content;
 }
 
+.app-myprofile-education-title {
+    color: var(--text-primary);
+    transition: all .3s;
+}
+
+.app-myprofile-education-edu-name {
+    color: var(--text-primary);
+    transition: all .3s;
+}
+
 @media only screen and (min-width: 736px) {
 
     .app-myprofile-education-content {

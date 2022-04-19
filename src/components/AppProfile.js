@@ -15,14 +15,17 @@ function AppProfile(props) {
     useEffect(() => {
         AOS.init({ duration: 2000 });
     }, []);
+
     return (
-        <div className="app-myprofile">
-            <div className="app-myprofile-titel">MyProfile</div>
+        <div className="app-myprofile" >
+
+            <div className="app-myprofile-titel">MyProfile <button className='btn-theme-mode' onClick={props.switchTheme}>switch to {props.theme === "light" ? "dark" : "light"}</button></div>
+
             <div className="app-myprofile-gird">
                 <AppProfileImage profiles={profiles} onProfileOpenClick={onProfileOpenClick} />
                 <AppProfileAboutMe />
                 <AppProfilePI />
-                <AppProfileSocial />
+                <AppProfileSocial themeGithub={props.themeGithub} />
                 <AppProfileExperience />
             </div>
             <div className="app-myprofile-gird-education-skill">

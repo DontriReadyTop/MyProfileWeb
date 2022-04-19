@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import './AppProfileSocial.css';
 
-function AppProfileSocial() {
+function AppProfileSocial(props) {
     return (
         <div data-aos="fade-up-right" data-aos-duration="600" className="app-myprofile-social app-myprofile-tablet">
 
@@ -13,7 +14,7 @@ function AppProfileSocial() {
             <hr />
             <a href="https://github.com/DontriReadyTop" target="_blank">
                 <div className="app-myprofile-social-content">
-                    <div><img src="/images/github.png" />Github</div>
+                    <div><img src={props.themeGithub} />Github</div>
                     <val>DontriReadyTop</val>
                 </div>
             </a>
@@ -27,7 +28,7 @@ function AppProfileSocial() {
             <hr />
             <a href="https://www.instagram.com/readytop_dontri/" target="_blank">
                 <div className="app-myprofile-social-content">
-                    <div><img src="/images/instagram.png" />Instagram</div>
+                    <div><img src={"/images/instagram.png"} />Instagram</div>
                     <val>readytop_dontri</val>
                 </div>
             </a>

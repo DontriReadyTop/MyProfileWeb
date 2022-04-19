@@ -5,6 +5,12 @@
 
 }
 
+.app {
+    overflow-x: hidden;
+    background-color: var(--background);
+    transition: all .5s;
+}
+
 .app-section-first {
     padding: 100px 30px;
 }

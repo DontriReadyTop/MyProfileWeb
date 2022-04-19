@@ -5,6 +5,20 @@
     border-radius: 10px;
 }
 
+.github-img {
+    background-image: var(--img-github);
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.app-myprofile-social-content div {
+    color: var(--text-primary);
+    transition: all .3s;
+}
+
+
 @media only screen and (min-width: 1100px) {
     .app-myprofile-social-content {
         font-size: 16px;

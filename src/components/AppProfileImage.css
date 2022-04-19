@@ -32,10 +32,12 @@
 
 
 .app-myprofile-image-name {
+    color: var(--text-primary);
     font-size: 30px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 10px;
+    transition: all .3s;
 }
 
 .app-myprofile-image-sub {

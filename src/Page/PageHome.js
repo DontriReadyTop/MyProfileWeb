@@ -7,7 +7,7 @@ import ProfileImg from '../components/ProfileImg';
 import ProfilePost from '../components/ProfilePost';
 import profiles from '../data/Profile';
 
-function PageHome() {
+function PageHome(props) {
     const [selectedProfile, setSelectedProfile] = useState(null);
     const [searchText, setSearchText] = useState('');
 
@@ -33,7 +33,7 @@ function PageHome() {
     return (
         <section className="app-section-first">
             <div className="app-container">
-                <AppProfile onProfileOpenClick={onProfileOpenClick} />
+                <AppProfile onProfileOpenClick={onProfileOpenClick} switchTheme={props.switchTheme} setTheme={props.setTheme} theme={props.theme} themeGithub={props.themeGithub}/>
 
                 {/* <div className="app-myfriend">
                     <AppSearch value={searchText} onValueChange={setSearchText} />
