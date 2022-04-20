@@ -17,6 +17,7 @@ code {
   --background-card: white;
   --text-primary: black;
   --img-github: url('../public/images/github.png');
+  --box-shadow-card: 0 2px 8px 0 rgb(0 0 0 / 20%);
 }
 
 [data-theme='dark'] {
@@ -24,5 +25,5 @@ code {
   --background-card: #1d1d1d;
   --text-primary: #e1e1e1;
   --img-github: url('../public/images/githubDark.png');
-
+  --box-shadow-card: 0 2px 8px 0 rgb(0 0 0 / 80%);
 }
