@@ -16,7 +16,7 @@ code {
   --background: white;
   --background-card: white;
   --text-primary: black;
-  --img-background: url('/public/images/Light-Backgrounds.png');
+  /* --img-background: url('/public/images/Light-Backgrounds.png'); */
   --box-shadow-card: 0 2px 8px 0 rgb(0 0 0 / 20%);
 }
 
@@ -24,6 +24,6 @@ code {
   --background: #121212;
   --background-card: #1d1d1d;
   --text-primary: #e1e1e1;
-  --img-background: url('/public/images/Dark-Backgrounds.jpg');
+  /* --img-background: url('/public/images/Dark-Backgrounds.jpg'); */
   --box-shadow-card: 0 2px 8px 0 rgb(0 0 0 / 80%);
 }
