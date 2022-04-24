@@ -7,9 +7,9 @@
 
 .app {
     overflow-x: hidden;
-    /* background-color: var(--background); */
+    background-color: var(--background);
     transition: all .5s;
-    background-image: var(--img-background);
+    /* background-image: var(--img-background); */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
