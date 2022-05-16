@@ -1,21 +1,21 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const cors = require('cors');
+const app = express();
 
-app.use(express.json())
+app.use(cors());
+app.use(express.json());
 
-// const signin = require('./routes/signin')
-// const signup = require('./routes/signup')
-// const dashboard = require('./routes/Dashboard')
-// const hardware = require('./routes/hardware')
-// const licence = require('./routes/licence')
-// const durable_article = require('./routes/durable_article')
+app.get('/', (request, response) => {
+    res.send('Hello World!')
+});
 
-// // * Routes
-// app.use("/sign-in", signin)
-// app.use("/sign-up",signup)
-// app.use("/dashboard", dashboard)
-// app.use("/hardware", hardware)
-// app.use("/licence", licence)
-// app.use("/durable_article", durable_article)
+const register = require('./routes/register');
+app.use("/register", register);
 
-module.exports = app
+const login = require('./routes/login');
+app.use("/login", login);
+
+const test = require('./routes/test');
+app.use("/test", test);
+
+module.exports = app;
