@@ -1,10 +1,10 @@
-import './PageHome.css';
+import './HomePage.css';
 import { useState } from 'react';
 import '../App.css';
-import AppProfile from '../components/AppProfile';
-import AppSearch from '../components/AppSearch';
-import ProfileImg from '../components/ProfileImg';
-import ProfilePost from '../components/ProfilePost';
+import AppProfile from '../components/HomePage/AppProfile';
+import AppSearch from '../components/HomePage/AppSearch';
+import ProfileImg from '../components/HomePage/ProfileImg';
+import ProfilePost from '../components/HomePage/ProfilePost';
 import profiles from '../data/Profile';
 
 function PageHome(props) {

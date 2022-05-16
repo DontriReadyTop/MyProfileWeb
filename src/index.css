@@ -15,15 +15,19 @@ code {
 :root {
   --background: white;
   --background-card: white;
+  --background-nav: white;
   --text-primary: black;
   --img-background: url('/public/images/Light-Backgrounds.png');
   --box-shadow-card: 0 2px 8px 0 rgb(0 0 0 / 20%);
+  --border-bottom: 0.5px solid #d8d5d59d;
 }
 
 [data-theme='dark'] {
   --background: #121212;
   --background-card: #1d1d1d;
+  --background-nav: #1d1d1d;
   --text-primary: #e1e1e1;
   --img-background: url('/public/images/Dark-Backgrounds.jpg');
   --box-shadow-card: 0 2px 8px 0 rgb(0 0 0 / 80%);
+  --border-bottom: 0.5px solid #000000;
 }

@@ -3,7 +3,7 @@ import AppProfileImage from './AppProfileImage';
 import AppProfileAboutMe from './AppProfileAboutMe';
 import AppProfilePI from './AppProfilePI';
 import AppProfileSocial from './AppProfileSocial';
-import profiles from '../data/Profile';
+import profiles from '../../data/Profile';
 import AppProfileExperience from './AppProfileExperience';
 import AppProfileEducation from './AppProfileEducation';
 import AppProfileSkill from './AppProfileSkill';
