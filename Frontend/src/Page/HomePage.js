@@ -30,10 +30,11 @@ function PageHome(props) {
     if (!!selectedProfile) {
         profilePost = <ProfilePost profile={selectedProfile} onProfileCloseClick={onProfileCloseClick} />;
     }
+
     return (
         <section className="app-section-first">
             <div className="app-container">
-                <AppProfile onProfileOpenClick={onProfileOpenClick} switchTheme={props.switchTheme} setTheme={props.setTheme} theme={props.theme} themeGithub={props.themeGithub}/>
+                <AppProfile onProfileOpenClick={onProfileOpenClick} switchTheme={props.switchTheme} setTheme={props.setTheme} theme={props.theme} themeGithub={props.themeGithub} />
 
                 {/* <div className="app-myfriend">
                     <AppSearch value={searchText} onValueChange={setSearchText} />
