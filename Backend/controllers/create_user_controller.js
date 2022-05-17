@@ -1,8 +1,6 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const { MongoClient } = require("mongodb");
-const uri = require('../databases/connect_db');
 
 /**
  * 
@@ -18,7 +16,7 @@ exports.createUser = async (request, response) => {
     try {
         const user = request.body;
         if (user.username != (undefined || null) && user.password != (undefined || null) && user.email != (undefined || null) && user.phone != (undefined || null)) {
-            const client = new MongoClient(uri);
+            const client = new MongoClient(process.env.SERVER_MONGO_DB);
             await client.connect();
             await client.db('ReadyTop').collection('users').insertOne({
                 username: user.username,

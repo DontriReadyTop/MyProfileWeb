@@ -1,4 +1,6 @@
 // * Start Server
+require('dotenv').config();
+
 const server = require('./app')
 
 const port = 5500

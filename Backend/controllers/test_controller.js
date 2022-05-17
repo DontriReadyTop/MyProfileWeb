@@ -1,6 +1,6 @@
 const express = require('express');
 const { MongoClient } = require("mongodb");
-const uri = require('../databases/connect_db');
+
 /**
  * 
  * @typedef {function(express.Request, express.Response):void} router
@@ -13,7 +13,7 @@ const uri = require('../databases/connect_db');
 
 exports.test = async (request, response) => {
     try {
-        const client = new MongoClient(uri);
+        const client = new MongoClient(process.env.SERVER_MONGO_DB);
         await client.connect();
         const users = await client.db('ReadyTop').collection('users').find({}).toArray();
         await client.close();

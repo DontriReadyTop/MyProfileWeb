@@ -1,7 +1,6 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const { MongoClient } = require("mongodb");
-const uri = require('../databases/connect_db');
 const jwt = require('jsonwebtoken')
 
 /**
@@ -16,7 +15,7 @@ const jwt = require('jsonwebtoken')
 
 exports.login = async (request, response) => {
     try {
-        const client = new MongoClient(uri);
+        const client = new MongoClient(process.env.SERVER_MONGO_DB);
         await client.connect();
         // const users = await client.db('ReadyTop').collection('users').find({}).toArray();
         const user = await client.db('ReadyTop').collection('users').findOne({ "username": request.body.username });
@@ -31,7 +30,7 @@ exports.login = async (request, response) => {
 
         const bcryptPassword = bcrypt.compareSync(request.body.password, user.password);
         if (bcryptPassword) {
-            const token = jwt.sign({ username: user.username, email: user.email }, "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImthbWphbW5vbmcudEBnbWFpbC5jb20iLCJ1c2VybmFtZSI6IkRvbnRyaSJ9.Vmu9MebQ2c5f7kJH5_Iy2Rm1uto7smwQlVO2IPPhDXs")
+            const token = jwt.sign({ _id: user._id, username: user.username, email: user.email }, process.env.JWT_KEY)
             response.json({
                 "status": "ok",
                 "message": "Login success.",
@@ -57,7 +56,7 @@ exports.authen = (request, response) => {
     try {
         const token = request.headers.authorization.split(' ')[1];
         console.log(token);
-        const decoded = jwt.verify(token, "eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6ImthbWphbW5vbmcudEBnbWFpbC5jb20iLCJ1c2VybmFtZSI6IkRvbnRyaSJ9.Vmu9MebQ2c5f7kJH5_Iy2Rm1uto7smwQlVO2IPPhDXs");
+        const decoded = jwt.verify(token, process.env.JWT_KEY);
         response.json({
             "status": "ok",
             "token": decoded

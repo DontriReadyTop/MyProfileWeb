@@ -22,4 +22,7 @@ app.use("/login", login);
 const test = require('./routes/test');
 app.use("/test", test);
 
+const profile = require('./routes/profile');
+app.use("/profile", profile);
+
 module.exports = app;
