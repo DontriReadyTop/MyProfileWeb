@@ -1,7 +1,7 @@
 const express = require('express')
 const test_controller = require('../controllers/test_controller');
 const router = express.Router()
-const authen = require('../middleware/authen');
+const authen = require('../middlewares/authen');
 
 router.use(authen);
 

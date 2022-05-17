@@ -1,9 +1,13 @@
 const express = require('express');
-const cors = require('cors');
-const app = express();
 
-app.use(cors());
+const app = express();
 app.use(express.json());
+
+const cors = require('cors');
+app.use(cors());
+
+const logger = require('./middlewares/logger')
+app.use(logger)
 
 app.get('/', (request, response) => {
     res.send('Hello World!')

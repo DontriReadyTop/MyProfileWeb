@@ -48,7 +48,7 @@ exports.login = async (request, response) => {
     } catch (error) {
         response.status(500).send({
             "status": "error",
-            "message": e.message
+            "message": error.message
         });
     }
 }
