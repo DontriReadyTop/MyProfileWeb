@@ -150,6 +150,10 @@
         transition: all .5s ease 0s;
     }
 
+    .register-img>a {
+        text-align: center;
+    }
+
     .form-group {
         position: relative;
         margin-bottom: 25px;

@@ -33,7 +33,7 @@ function RegisterPage() {
                 <input className="input-register" type="password" name="ConfirmPassword" id="ConfirmPassword" placeholder="Repeat your password" />
               </div>
               <div className="btn-register">
-                <p><Link to="/">Register</Link></p>
+                <p><Link to="/login">Register</Link></p>
               </div>
             </form>
           </div>

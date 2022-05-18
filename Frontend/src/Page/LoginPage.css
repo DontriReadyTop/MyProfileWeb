@@ -162,6 +162,10 @@
         transition: all .5s ease 0s;
     }
 
+    .login-img>a {
+        text-align: center;
+    }
+
     .form-group {
         position: relative;
         margin-bottom: 25px;
