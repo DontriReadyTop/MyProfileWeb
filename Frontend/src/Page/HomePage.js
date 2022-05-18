@@ -6,6 +6,8 @@ import AppSearch from '../components/HomePage/AppSearch';
 import ProfileImg from '../components/HomePage/ProfileImg';
 import ProfilePost from '../components/HomePage/ProfilePost';
 import profiles from '../data/Profile';
+import { StickyNav } from 'react-js-stickynav';
+import AppHeader from '../components/HomePage/AppHeader';
 
 function PageHome(props) {
     const [selectedProfile, setSelectedProfile] = useState(null);
@@ -22,6 +24,7 @@ function PageHome(props) {
     const filterProfiles = profiles.filter((profile) => {
         return profile.title.includes(searchText.toLocaleLowerCase());
     });
+
     const profileElements = filterProfiles.map((profile, index) => {
         return <ProfileImg key={index} profile={profile} onProfileOpenClick={onProfileOpenClick} />;
     });
@@ -32,20 +35,29 @@ function PageHome(props) {
     }
 
     return (
-        <section className="app-section-first">
-            <div className="app-container">
-                <AppProfile onProfileOpenClick={onProfileOpenClick} switchTheme={props.switchTheme} setTheme={props.setTheme} theme={props.theme} themeGithub={props.themeGithub} />
+        <>
 
-                {/* <div className="app-myfriend">
+            <StickyNav>
+                <AppHeader switchTheme={props.switchTheme} setTheme={props.setTheme} theme={props.theme} />
+            </StickyNav>
+
+            <section className="app-section-first">
+                <div className="app-container">
+                    <AppProfile onProfileOpenClick={onProfileOpenClick} switchTheme={props.switchTheme} setTheme={props.setTheme} theme={props.theme} themeGithub={props.themeGithub} />
+
+                    {/* <div className="app-myfriend">
                     <AppSearch value={searchText} onValueChange={setSearchText} />
                     <div className="app-grid">
                         {profileElements}
                     </div>
                 </div> */}
 
-            </div>
-            {profilePost}
-        </section>
+                </div>
+                {profilePost}
+            </section>
+        </>
+
+
     );
 }
 

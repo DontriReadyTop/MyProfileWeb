@@ -1,0 +1,123 @@
+.app-section-second {
+    padding: 20vh 0;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.title-login-form {
+    padding-top: 70px;
+    font-size: xx-large;
+    margin-bottom: 40px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.icon-login {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    color: #222;
+}
+
+.input-login {
+    width: 100%;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #999;
+    padding: 6px 30px;
+    box-sizing: border-box;
+}
+
+.input-login:focus-visible {
+    outline: none;
+}
+
+.input-login:focus {
+    color: black;
+    border-bottom: 1px solid black;
+}
+
+@media only screen and (min-width: 737px) {
+    .card-login {
+        width: 730px;
+        height: 500px;
+        border-radius: 10px;
+        margin: auto;
+        background-color: var(--background-card);
+        box-shadow: var(--box-shadow-card);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "login_image login_form"
+        ;
+        transition: all .5s ease 0s;
+
+    }
+
+    .login-form {
+        grid-area: login_form;
+        padding-left: 30px;
+        padding-right: 40px;
+    }
+
+    .login-img {
+        grid-area: login_image;
+        place-self: center;
+    }
+
+    .login-img>img {
+        width: 270px;
+        transition: all .5s ease 0s;
+    }
+
+}
+
+@media only screen and (max-width: 736px) {
+    .card-login {
+        width: 90vw;
+        height: 500px;
+        border-radius: 10px;
+        margin: auto;
+        background-color: var(--background-card);
+        box-shadow: var(--box-shadow-card);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "login_form"
+            "login_image"
+        ;
+        transition: all .5s ease 0s;
+    }
+
+    .login-form {
+        grid-area: login_form;
+        text-align: center;
+    }
+
+    .login-img {
+        grid-area: login_image;
+        place-self: center;
+    }
+
+    .login-img>img {
+        width: 240px;
+        transition: all .5s ease 0s;
+    }
+
+    .form-group {
+        position: relative;
+        margin-bottom: 25px;
+        overflow: hidden;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+}

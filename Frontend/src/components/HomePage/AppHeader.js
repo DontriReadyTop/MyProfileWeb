@@ -85,7 +85,7 @@ function AppHeader(props) {
 
     return (
         <>
-            {document.onselectstart = new Function("return false")}
+            {document.onselectstart = new Function("return true")}
             <header className="app-header grid-nav">
                 <div className="close-menu" onClick={openNavBar}>
                     {openNav ? <VscChromeClose className="change-icon" size={30} /> : <GiHamburgerMenu className="change-icon" size={30} />}
