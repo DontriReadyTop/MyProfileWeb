@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { BiUserCircle, BiLock, BiLockAlt, BiPhone } from "react-icons/bi";
 import { AiOutlineMail } from "react-icons/ai";
 import { useState } from 'react';
+import axios from 'axios';
+
 
 function RegisterPage() {
 
@@ -12,10 +14,17 @@ function RegisterPage() {
   const [email, setEmail] = useState(null);
   const [phone, setPhone] = useState(null);
 
+  const addOnSelectStart = node => {
+    if (!node) return;
+    node.addEventListener("selectstart", e => {
+      e.preventDefault();
+    });
+  };
+
   const checkEmpty = (temp) => {
     if (temp == "") {
       return null;
-    }else{
+    } else {
       return temp;
     }
   }
@@ -37,13 +46,26 @@ function RegisterPage() {
   }
 
   const submitRegister = async () => {
-    console.log(username);
-    console.log(password);
-    console.log(confirmPassword);
-    console.log(email);
-    console.log(phone);
+    if (username != null && password != null && confirmPassword != null && email != null && phone != null && password == confirmPassword) {
+      const response = await axios.post(
+        "http://localhost:5500/register",
+        {
+          username: username.toLowerCase(),
+          password: password,
+          email: email,
+          phone: phone,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
 
-    
+      if (response.status == "200") {
+        window.location = "/login"
+      }
+    }
   }
 
   return (
@@ -73,7 +95,7 @@ function RegisterPage() {
                 <label className="icon-register" htmlFor="ConfirmPassword"><BiLockAlt size={21} /></label>
                 <input className="input-register" type="password" name="ConfirmPassword" id="ConfirmPassword" placeholder="Repeat your password" value={confirmPassword} onChange={handleConfirmPasswordChange} />
               </div>
-              <div className="btn-register" onClick={submitRegister}>
+              <div className="btn-register" ref={addOnSelectStart} onClick={submitRegister}>
                 <p>Register</p>
               </div>
             </form>
