@@ -5,7 +5,6 @@ import { AiOutlineMail } from "react-icons/ai";
 import { useState } from 'react';
 import axios from 'axios';
 
-
 function RegisterPage() {
 
   const [username, setUsername] = useState(null);

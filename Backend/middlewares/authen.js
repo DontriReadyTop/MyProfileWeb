@@ -5,11 +5,11 @@ module.exports = (request, response, next) => {
         const token = request.headers.authorization.split(' ')[1]
         const decoded = jwt.verify(token, process.env.JWT_KEY)
         request.userData = decoded;
-        // console.log(req.userData)
+        console.log(decoded)
         next();
     } catch (error) {
         return response.status(401).json({
-            Message: "Authentication Failed. Access Denied"
+            Message: "Authentication Failed. Access Denied."
         })
     }
 }

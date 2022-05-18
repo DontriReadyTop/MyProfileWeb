@@ -65,6 +65,10 @@ function AppHeader(props) {
         return () => window.removeEventListener("resize", handleWindowResize);
     }, []);
 
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+    }
+
     return (
         <>
             {document.onselectstart = new Function("return true")}
@@ -97,7 +101,7 @@ function AppHeader(props) {
                         <div className="account-menu" style={{ display: menuImgIcon }}>
                             <ul className="account-menu-links">
                                 <Link to="#">Edit account</Link>
-                                <Link to="/login">Sign out</Link>
+                                <Link to="/login" onClick={handleLogout} >Sign out</Link>
                             </ul>
                         </div>
                     </>
@@ -114,7 +118,7 @@ function AppHeader(props) {
                                 <Link to="/">My profile</Link>
                                 <Link to="#">AnimeList</Link>
                                 <Link to="#">Edit account</Link>
-                                <Link to="/login">Sign out</Link>
+                                <Link to="/login" onClick={handleLogout}>Sign out</Link>
                             </ul>
                         </nav>
 

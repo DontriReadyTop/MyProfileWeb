@@ -9,10 +9,6 @@ body{
     background-color: var(--background);
 }
 
-.background-app {
-    background-color: var(--background);
-}
-
 .app {
     overflow-x: hidden;
     transition: all .5s;
