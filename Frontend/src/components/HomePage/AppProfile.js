@@ -22,7 +22,7 @@ function AppProfile(props) {
         setToggled((s) => !s);
         props.switchTheme();
     }
-    console.log(toggled);
+    // console.log(toggled);
 
     return (
         <div className="app-myprofile" >

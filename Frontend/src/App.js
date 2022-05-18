@@ -7,7 +7,7 @@ import HomePage from './Page/HomePage';
 import LoginPage from './Page/LoginPage';
 import RegisterPage from './Page/RegisterPage';
 import axios from "axios";
-import ProtectedRoutes from './ProtectedRoutes';
+import AuthenWeb from './AuthenWeb';
 
 
 function App() {
@@ -25,43 +25,14 @@ function App() {
     setThemeGithub(newThemeGithub);
   }
 
-  // const AuthenWeb = () => {
-
-  //   const [authen, setAuthen] = useState(false);
-
-
-  //   useEffect(async () => {
-
-  //     const response = await axios.post(
-  //       "http://localhost:5500/login/authen",
-  //       {}
-  //       ,
-  //       {
-  //         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
-  //       }
-  //     );
-
-  //     if (response.data.status == 'ok') {
-  //       setAuthen(true);
-  //     } else {
-  //       setAuthen(false);
-  //     }
-
-  //   }, []);
-
-  //   console.log(authen)
-
-  //   return authen ? <Outlet /> : <Navigate to='/login' />;
-  // }
-
   return (
     <>
 
       <div className="app" data-theme={theme}>
         <Routes>
-          <Route exact path="/login" element={<LoginPage />} />
+          <Route path="/login" element={<LoginPage />} />
           <Route path="/register" element={<RegisterPage />} />
-          <Route element={<ProtectedRoutes />}>
+          <Route element={<AuthenWeb />}>
             <Route path="/" element={<HomePage switchTheme={switchTheme} setTheme={setTheme} theme={theme} themeGithub={themeGithub} />} />
           </Route>
         </Routes>

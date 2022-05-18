@@ -1,5 +1,5 @@
 import './HomePage.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../App.css';
 import AppProfile from '../components/HomePage/AppProfile';
 import AppSearch from '../components/HomePage/AppSearch';
@@ -8,8 +8,11 @@ import ProfilePost from '../components/HomePage/ProfilePost';
 import profiles from '../data/Profile';
 import { StickyNav } from 'react-js-stickynav';
 import AppHeader from '../components/HomePage/AppHeader';
+import axios from "axios";
+
 
 function PageHome(props) {
+
     const [selectedProfile, setSelectedProfile] = useState(null);
     const [searchText, setSearchText] = useState('');
 

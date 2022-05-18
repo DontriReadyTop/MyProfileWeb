@@ -24,31 +24,26 @@ const { Navigate, Outlet } = require("react-router-dom");
 //     return fetchAuth(token) ? <Outlet /> : <Redirect to={'/login'} />
 // }
 
-const ProtectedRoutes = () => {
-    const [auth, setAuth] = useState(true)
-    const client = axios.create({
-      baseURL: "http://localhost:5500",
-      headers: {
-        Authorization: `Bearer ${localStorage.getItem('token')}`
-      }
-    });
+const AuthenWeb = () => {
 
+    const [authen, setAuthen] = useState(true)
 
     useEffect(async () => {
-      const response = await client.get(`/login/authen`);
-      // console.log(response.data)
-      if (response.data.status == 'ok') {
-        setAuth(true)
-      } else if(response.data.status == 'error') {
-        setAuth(false)
-      } else {
-        setAuth(false)
-      }
-      
-    }, [])
+        try {
+            const response = await axios.get(
+                "http://localhost:5500/login/authen",
+                {
+                    headers: {
+                        "Authorization": `Bearer ${localStorage.getItem('token')}`
+                    },
+                }
+            )
+        } catch (error) {
+            setAuthen(false);
+        }
+    }, []);
 
-    console.log(auth)
-    return auth ? <Outlet /> : <Navigate to='/login' />;
+    return authen ? <Outlet /> : <Navigate to='/login' />;
 }
 
-export default ProtectedRoutes;
+export default AuthenWeb;
