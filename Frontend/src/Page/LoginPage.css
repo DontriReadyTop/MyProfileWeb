@@ -31,6 +31,7 @@
     padding: 6px 30px;
     box-sizing: border-box;
     font-size: medium;
+    color: var(--text-primary);
 }
 
 .input-login:focus-visible {
