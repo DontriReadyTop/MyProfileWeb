@@ -32,7 +32,7 @@
 
 .btn-register {
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 35px;
     text-align-last: center;
     font-size: medium;
     color: white;
@@ -58,8 +58,8 @@
 
 @media only screen and (min-width: 737px) {
     .card-register {
-        width: 730px;
-        height: 500px;
+        width: 700px;
+        height: 600px;
         border-radius: 10px;
         margin: auto;
         background-color: var(--background-card);
@@ -67,13 +67,13 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
-            "register_image register_form"
+            "register_form register_image"
         ;
         transition: all .5s ease 0s;
     }
 
     .title-register-form {
-        padding-top: 30px;
+        padding-top: 60px;
         font-size: xx-large;
         margin-bottom: 30px;
         color: var(--text-primary);
@@ -81,8 +81,8 @@
 
     .register-form {
         grid-area: register_form;
-        padding-left: 30px;
-        padding-right: 40px;
+        padding-left: 50px;
+        padding-right: 10px;
     }
 
     .register-img {
