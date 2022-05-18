@@ -1,16 +1,4 @@
-.app-section-second {
-    padding: 20vh 0;
-    width: 100vw;
-    overflow: hidden;
-}
-
-.form-group {
-    position: relative;
-    margin-bottom: 25px;
-    overflow: hidden;
-}
-
-.icon-login {
+.icon-register {
     position: absolute;
     left: 0;
     top: 50%;
@@ -22,7 +10,7 @@
     color: var(--text-primary);
 }
 
-.input-login {
+.input-register {
     background-color: var(--background-card);
     width: 100%;
     display: block;
@@ -33,16 +21,16 @@
     font-size: medium;
 }
 
-.input-login:focus-visible {
+.input-register:focus-visible {
     outline: none;
 }
 
-.input-login:focus {
+.input-register:focus {
     color: var(--text-primary);
     border-bottom: 1px solid var(--text-primary);
 }
 
-.btn-login {
+.btn-register {
     cursor: pointer;
     margin-top: 10px;
     text-align-last: center;
@@ -57,19 +45,19 @@
     transition: transform 200ms, box-shadow 200ms;
 }
 
-.btn-login:active {
+.btn-register:active {
     transform: translateY(4px) translateX(4px);
     box-shadow: #094c66 0px 0px 0px;
     border: 1px 1px 1px 1px solid black;
     transition: transform 200ms, box-shadow 200ms;
 }
 
-.btn-login>p {
+.btn-register>p {
     margin-top: 6px;
 }
 
 @media only screen and (min-width: 737px) {
-    .card-login {
+    .card-register {
         width: 730px;
         height: 500px;
         border-radius: 10px;
@@ -79,43 +67,43 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
-            "login_image login_form"
+            "register_image register_form"
         ;
         transition: all .5s ease 0s;
     }
 
-    .title-login-form {
-        padding-top: 110px;
+    .title-register-form {
+        padding-top: 30px;
         font-size: xx-large;
         margin-bottom: 30px;
         color: var(--text-primary);
     }
 
-    .login-form {
-        grid-area: login_form;
+    .register-form {
+        grid-area: register_form;
         padding-left: 30px;
         padding-right: 40px;
     }
 
-    .login-img {
-        grid-area: login_image;
+    .register-img {
+        grid-area: register_image;
         place-self: center;
         color: var(--text-primary);
     }
 
-    .login-img>img {
+    .register-img>img {
         width: 270px;
         transition: all .5s ease 0s;
     }
 
-    .login-img>a {
+    .register-img>a {
         text-align: center;
     }
 
 }
 
 @media only screen and (max-width: 736px) {
-    .card-login {
+    .card-register {
         width: 90vw;
         height: auto;
         border-radius: 10px;
@@ -125,39 +113,39 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-areas:
-            "login_form"
-            "login_image"
+            "register_form"
+            "register_image"
         ;
         transition: all .5s ease 0s;
     }
 
-    .title-login-form {
+    .title-register-form {
         padding-top: 30px;
         font-size: xx-large;
         margin-bottom: 40px;
         color: var(--text-primary);
     }
 
-    .login-form {
-        grid-area: login_form;
+    .register-form {
+        grid-area: register_form;
         padding-left: 10%;
         padding-right: 10%;
         text-align: center;
     }
 
-    .login-form>form {
+    .register-form>form {
         text-align: -webkit-center;
     }
 
-    .login-img {
-        grid-area: login_image;
+    .register-img {
+        grid-area: register_image;
         padding-top: 50px;
         padding-bottom: 50px;
         place-self: center;
         color: var(--text-primary);
     }
 
-    .login-img>img {
+    .register-img>img {
         width: 240px;
         transition: all .5s ease 0s;
     }

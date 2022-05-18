@@ -1,4 +1,5 @@
 import './LoginPage.css';
+import { Link } from "react-router-dom";
 import { BiUserCircle, BiLock } from "react-icons/bi";
 
 function LoginPage() {
@@ -18,10 +19,14 @@ function LoginPage() {
                 <label className="icon-login" htmlFor="Password"><BiLock size={21} /></label>
                 <input className="input-login" type="password" name="Password" id="Password" placeholder="Password" />
               </div>
+              <div className="btn-login">
+              <p><Link to="/">Log in</Link></p>
+              </div>
             </form>
           </div>
           <div className="login-img">
             <img src="/images/login.png" />
+            <Link to="/register"><p>Create an account.</p></Link>
           </div>
         </div>
       </section>

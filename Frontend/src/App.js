@@ -5,12 +5,13 @@ import useLocalStorage from 'use-local-storage'
 import { Helmet } from "react-helmet";
 import HomePage from './Page/HomePage';
 import LoginPage from './Page/LoginPage';
+import RegisterPage from './Page/RegisterPage';
 
 function App() {
   const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
   const [themeGithub, setThemeGithub] = useState(theme === "light" ? "/images/github.png" : "images/githubDark.png");
-  const [styleBody, setStyleBody] = useState( theme === "light" ? "white": "black");
+  const [styleBody, setStyleBody] = useState(theme === "light" ? "white" : "#121212");
 
   const switchTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
@@ -32,6 +33,7 @@ function App() {
         <div className="app" data-theme={theme}>
           <Routes >
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
             <Route path="/" element={<HomePage switchTheme={switchTheme} setTheme={setTheme} theme={theme} themeGithub={themeGithub} />} />
           </Routes>
         </div>

@@ -65,24 +65,6 @@ function AppHeader(props) {
         return () => window.removeEventListener("resize", handleWindowResize);
     }, []);
 
-    // if (lowerThen736) {
-    //     setOpenNav(false);
-    //     setMenu("none")
-    //     setOpenImgIcon(false);
-    //     setMenuImgIcon("none");
-    //     setCloseImgIcon(false);
-    //     setCloseMenuImgIcon("none");
-    // }
-
-    // if (biggerThen737) {
-    //     setOpenNav(false);
-    //     setMenu("none")
-    //     setOpenImgIcon(false);
-    //     setMenuImgIcon("none");
-    //     setCloseImgIcon(false);
-    //     setCloseMenuImgIcon("none");
-    // }
-
     return (
         <>
             {document.onselectstart = new Function("return true")}
@@ -115,7 +97,7 @@ function AppHeader(props) {
                         <div className="account-menu" style={{ display: menuImgIcon }}>
                             <ul className="account-menu-links">
                                 <Link to="#">Edit account</Link>
-                                <Link to="#">Sign out</Link>
+                                <Link to="/login">Sign out</Link>
                             </ul>
                         </div>
                     </>
@@ -132,7 +114,7 @@ function AppHeader(props) {
                                 <Link to="/">My profile</Link>
                                 <Link to="#">AnimeList</Link>
                                 <Link to="#">Edit account</Link>
-                                <Link to="#">Sign out</Link>
+                                <Link to="/login">Sign out</Link>
                             </ul>
                         </nav>
 
