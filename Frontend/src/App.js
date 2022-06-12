@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet";
 import HomePage from './Page/HomePage';
 import LoginPage from './Page/LoginPage';
 import RegisterPage from './Page/RegisterPage';
+import AddProfile from './Page/CreateProfile';
 import axios from "axios";
 import AuthenWeb from './AuthenWeb';
 
@@ -34,6 +35,7 @@ function App() {
           <Route path="/register" element={<RegisterPage />} />
           <Route element={<AuthenWeb />}>
             <Route path="/" element={<HomePage switchTheme={switchTheme} setTheme={setTheme} theme={theme} themeGithub={themeGithub} />} />
+            <Route path="/addprofile" element={<AddProfile />} />
           </Route>
         </Routes>
       </div>

@@ -4,3 +4,66 @@
     grid-template-areas: "def def def def def";
     row-gap: 16px;
 }
+
+.dont-profile {
+    max-height: 33vh;
+    margin-top: 33vh;
+    display: grid;
+    grid-template-columns: 0.05fr 1fr 0.05fr;
+    grid-template-areas:
+        "none text_profile nonee"
+        "none btn_create_profile noneee"
+    ;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-text-profile {
+    grid-area: text_profile;
+    text-align: center;
+}
+
+.text-profile {
+    font-size: xx-large;
+}
+
+.grid-btn-create-profile {
+    grid-area: btn_create_profile;
+    text-align: center;
+}
+
+/* CSS */
+.button-create-profile {
+    background-color: #fbeee0;
+    border: 2px solid #422800;
+    border-radius: 30px;
+    box-shadow: #422800 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 0 18px;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-create-profile:hover {
+    background-color: #fff;
+}
+
+.button-create-profile:active {
+    box-shadow: #422800 2px 2px 0 0;
+    transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+    .button-create-profile {
+        min-width: 120px;
+        padding: 0 25px;
+    }
+}

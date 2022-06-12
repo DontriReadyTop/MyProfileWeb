@@ -1,0 +1,61 @@
+@media only screen and (min-width: 737px) {
+
+    .grid-form-add {
+        font-size: larger;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "title title"
+            "firstname lastname"
+        ;
+        column-gap: 40px;
+        transition: 1s;
+    }
+
+}
+
+.grid-form-add {
+    font-size: larger;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    transition: 1s;
+}
+
+.form-group lable {
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    transition: 1s;
+}
+
+.form-control {
+    font-size: inherit;
+    width: -webkit-fill-available;
+    padding: 8px 10px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.form-control:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
+}
+
+.firstname {
+    grid-area: firstname;
+    font-weight: bolder;
+}
+
+.lastname {
+    grid-area: lastname;
+    font-weight: bolder;
+}
