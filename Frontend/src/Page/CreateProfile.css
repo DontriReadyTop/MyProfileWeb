@@ -3,15 +3,51 @@
     .grid-form-add {
         font-size: larger;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-areas:
-            "title title"
-            "firstname lastname"
+            "title_profile"
+            "step1"
+            "step2"
         ;
         column-gap: 40px;
+        row-gap: 15px;
         transition: 1s;
     }
 
+    .grid-form-step1 {
+        grid-area: step1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "title_step1 title_step1"
+            "prefix_name none"
+            "firstname lastname"
+            "nickname e_mail"
+            "phone gender"
+            "birthday hobby"
+            "address about_me"
+        ;
+        column-gap: 40px;
+        row-gap: 15px;
+        transition: 1s;
+    }
+
+    .grid-form-step2 {
+        grid-area: step2;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "title_step2 title_step2"
+        ;
+        column-gap: 40px;
+        row-gap: 15px;
+        transition: 1s;
+    }
+
+}
+
+.grid-form-add div {
+    margin: 0;
 }
 
 .grid-form-add {
@@ -23,7 +59,7 @@
     transition: 1s;
 }
 
-.form-group lable {
+.form-group label {
     display: block;
     margin-bottom: 10px;
     margin-left: 5px;
@@ -50,12 +86,110 @@
     box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 25%);
 }
 
+.form-control-textarea {
+    resize: none;
+    width: -webkit-fill-available;
+    height: 125px;
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.title-profile {
+    grid-area: title_profile;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.title-step1 {
+    grid-area: title_step1;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.title-step2 {
+    grid-area: title_step2;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+
+.prefix-name {
+    grid-area: prefix_name;
+}
+
 .firstname {
     grid-area: firstname;
-    font-weight: bolder;
 }
 
 .lastname {
     grid-area: lastname;
-    font-weight: bolder;
+}
+
+.nickname {
+    grid-area: nickname;
+}
+
+.e-mail {
+    grid-area: e_mail;
+}
+
+.phone {
+    grid-area: phone;
+}
+
+.gender {
+    grid-area: gender;
+}
+
+.birthday {
+    grid-area: birthday;
+}
+
+.hobby {
+    grid-area: hobby;
+}
+
+.address {
+    grid-area: address;
+}
+
+.about-me {
+    grid-area: about_me;
+}
+
+.btn-add-social {
+    grid-area: btn_add_social;
+    align-self: center;
+    justify-self: right;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 30px;
+    text-align-last: center;
+    font-size: medium;
+    color: white;
+    width: 160px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: #12d322;
+    box-shadow: #094c66 4px 4px 0px;
+    border-radius: 8px;
+    transition: transform 200ms, box-shadow 200ms;
+}
+
+.btn-add-social:active {
+    transform: translateY(4px) translateX(4px);
+    box-shadow: #094c66 0px 0px 0px;
+    border: 1px 1px 1px 1px solid black;
+    transition: transform 200ms, box-shadow 200ms;
+}
+
+.btn-add-social>p {
+    margin-top: 6px;
+}
+
+.social-card{
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    padding: 30px;
 }

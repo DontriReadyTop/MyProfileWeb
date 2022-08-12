@@ -72,7 +72,7 @@ function PageHome(props) {
                                         <Link to="/addprofile" switchTheme={props.switchTheme} setTheme={props.setTheme} theme={props.theme} themeGithub={props.themeGithub}><button class="button-create-profile" role="button">Create Profile</button></Link>
                                     </div>
                                 </div>
-                                {/* <AppProfile onProfileOpenClick={onProfileOpenClick} switchTheme={props.switchTheme} setTheme={props.setTheme} theme={props.theme} themeGithub={props.themeGithub} /> */}
+                                <AppProfile onProfileOpenClick={onProfileOpenClick} switchTheme={props.switchTheme} setTheme={props.setTheme} theme={props.theme} themeGithub={props.themeGithub} />
 
                             </>
                             :
